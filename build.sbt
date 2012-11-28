@@ -1,4 +1,4 @@
-name := "the-job-announcement-specs-scala"
+name := "the-job-announcement-specs"
 
 description := "Executable Specifications for The Job Announcement"
 
