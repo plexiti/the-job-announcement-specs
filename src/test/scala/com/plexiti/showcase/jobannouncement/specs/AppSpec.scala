@@ -1,4 +1,4 @@
-package com.plexiti.showcase.jobannouncement.tests.acceptance
+package com.plexiti.showcase.jobannouncement.specs
 
 import org.scalatest.selenium._
 import org.scalatest._
