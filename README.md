@@ -4,6 +4,8 @@ Executable Specifications for The Job Announcement
 This project's aim is to create [executable specifications](http://specificationbyexample.com/) for [The Job Announcement showcase](http://the-job-announcement.com/) ([GitHub repository](https://github.com/plexiti/the-job-announcement-fox)) using [ScalaTest](http://www.scalatest.org/).
 
 ```scala
+...
+class AppSpec extends FlatSpec with ShouldMatchers with Firefox {
   ...
   "The app start page" should "have the correct title" in {
     go to (host + "/index.jsf")
