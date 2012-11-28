@@ -1,4 +1,6 @@
-name := "The Job Announcement Testing"
+name := "the-job-announcement-specs-scala"
+
+description := "Executable Specifications for The Job Announcement"
 
 version := "0.1"
 
