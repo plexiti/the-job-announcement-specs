@@ -96,7 +96,7 @@ class AppSpec extends FlatSpec with ShouldMatchers with Firefox {
 
 Follow these steps:
 
-1. Install and start The Job Announcement application as described [here](https://github.com/plexiti/the-job-announcement-fox).
+1. Install and start The Job Announcement application as described [here](https://github.com/plexiti/the-job-announcement-fox#building-the-showcase-yourself).
 1. Make sure the app is running by pointing your browser to `http://localhost:8080/the-job-announcement`
 1. Install 
     * the [sbt](http://www.scala-sbt.org) build tool for Scala and Java projects
