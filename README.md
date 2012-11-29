@@ -7,17 +7,6 @@ This project's aim is to create [executable specifications](http://specification
 ...
 class AppSpec extends FlatSpec with ShouldMatchers with Firefox {
   ...
-  "The app start page" should "have the correct title" in {
-    go to (host + "/index.jsf")
-    pageTitle should be ("The Job Announcement - Index")
-  }
-  
-  "Clicking on the 'Start the role play!' link" should "take us to the control center page" in {
-    go to (host + "/index.jsf")
-	click on linkText("Start the role play!")
-    pageTitle should be ("The Job Announcement - The control center")
-  }
-  
   "Gonzo The Great" should "be able to request a new job announcement" in {
     go to (host + "/start.jsf")
     pageTitle should (include ("The control center"))
@@ -41,7 +30,7 @@ class AppSpec extends FlatSpec with ShouldMatchers with Firefox {
 
     switchToTab("To describe");
 
-    // FIXME: Since job announcements are sorted newest last, select the *last* 'Describe' button
+    // FIXME: Since job announcements are sorted newest last, we should select the *last* 'Describe' button
     click on cssSelector("input[value='Describe']")
     pageTitle should (include("Describe job announcement"))
 
@@ -74,7 +63,7 @@ class AppSpec extends FlatSpec with ShouldMatchers with Firefox {
     
     switchToTab("To review");
 
-    // FIXME: Since job announcements are sorted newest last, select the *last* "Review" button
+    // FIXME: Since job announcements are sorted newest last, we should select the *last* "Review" button
     click on cssSelector("input[name*='review']");
     pageTitle should (include("Review job announcement"))
     textArea(CssSelectorQuery("textarea[name*='comment']")).value = "Looks great! Publish it!"    
@@ -102,3 +91,16 @@ class AppSpec extends FlatSpec with ShouldMatchers with Firefox {
   }
   ...
 ```
+
+# Executing the specification yourself?
+
+Follow these steps:
+
+1. Install and start The Job Announcement application as described [here](https://github.com/plexiti/the-job-announcement-fox).
+1. Make sure the app is running by pointing your browser to `http://localhost:8080/the-job-announcement`
+1. Install 
+    * the [sbt](http://www.scala-sbt.org) build tool for Scala and Java projects
+    * the [Firefox web browser](http://www.mozilla.org/en-US/firefox/new/) 
+1. Clone this repository with `git clone git@github.com:plexiti/the-job-announcement-specs.git`
+1. `cd the-job-announcement-specs` and execute the specification with `sbt test`
+1. If you want to open the project in Eclipse, do `sbt eclipse` 
