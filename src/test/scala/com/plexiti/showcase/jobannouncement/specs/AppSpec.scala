@@ -11,7 +11,8 @@ import org.openqa.selenium.By
 import java.util.Date
 
 @RunWith(classOf[JUnitRunner])
-class AppSpec extends FlatSpec with ShouldMatchers with Firefox {
+class AppSpec(implicit val webDriver: WebDriver) extends FlatSpec with ShouldMatchers 
+	with WebBrowser { 
 
   val host = "http://localhost:8080/the-job-announcement"
   
